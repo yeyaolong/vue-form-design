@@ -13,6 +13,9 @@
         <el-form-item  label="标签" v-if="!hideModel">
           <el-input v-model="selectItem.label" placeholder="请输入" />
         </el-form-item>
+        <el-form-item label="标签文字大小">
+             <el-slider v-model="selectItem.fontSize" :min="12" :max="64" input-size="small"></el-slider>
+          </el-form-item>
        
         <el-form-item  label="数据字段" v-if="!hideModel && !['table','grid','divider','label','html','button',].includes(selectItem.type)" >
           <el-input v-model="selectItem.model" placeholder="请输入" :disabled="(selectItem.item != undefined && selectItem.item.id != undefined) "/>
@@ -569,17 +572,17 @@
         </template> 
         <!-- 按钮  end -->
 
-        <!-- 标签 start-->
+        <!-- 文字 start-->
         <template v-if="selectItem.type == 'text'"> 
-          <!-- 按钮类型 -->
           <el-form-item  label="文字对齐方式">
             <el-radio-group v-model="options.textAlign">
               <el-radio-button label="left">左</el-radio-button>
               <el-radio-button label="center">居中</el-radio-button>
               <el-radio-button label="right">右</el-radio-button>
             </el-radio-group>
-          </el-form-item> 
+          </el-form-item>
           <el-divider ></el-divider>
+
           <el-form-item   label="操作属性" >
             <el-checkbox v-model="options.hidden"  label="隐藏" /> 
             <el-checkbox v-model="options.showRequiredMark" label="显示必选标记" />

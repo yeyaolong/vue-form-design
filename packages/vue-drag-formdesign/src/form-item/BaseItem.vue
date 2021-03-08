@@ -15,7 +15,7 @@
           'slider' 
         ].includes(record.type)">
      
-      <span   v-if="record.options.prepend" v-html="transformAppend(record.options.prepend)">
+      <span v-if="record.options.prepend" v-html="transformAppend(record.options.prepend)">
          
       </span>
        <span v-if="!loading">{{models[record.model]}} </span>
@@ -158,7 +158,7 @@
       >
         <el-option
           v-for="item in ((record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)"
-          :key="item[itemProp.value]"
+          :key="item[itemProp.value] + Math.random()"
           :label="item[itemProp.label]"
           :value="item[itemProp.value]">
         </el-option>
@@ -178,7 +178,7 @@
       > 
         <el-option
           v-for="item in ((record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)"
-          :key="item[itemProp.value]"
+          :key="item[itemProp.value] + Math.random()"
           :label="item[itemProp.label]"
           :value="item[itemProp.value]">
         </el-option>
@@ -187,14 +187,25 @@
  
     <!-- 多选框 --> 
     <el-checkbox-group  
-      v-else-if="record.type === 'checkbox'"  
+      v-else-if="record.type === 'checkbox'"
       v-model="checkList"
       :disabled="disabled || record.options.disabled"
       :placeholder="record.options.placeholder"
       @change="handleChange($event, record.model)"
     >
-      <el-checkbox  v-for="checkitem in  ( (record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" :label="checkitem[itemProp.value]" :key="checkitem[itemProp.value]"> 
-        {{checkitem[itemProp.label]}}
+      <el-checkbox 
+        v-for="checkitem in ( (record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" 
+        :disabled="checkitem[itemProp.disabled]" 
+        :class="[record.options.optionsWrap ? 'checkbox-options-wrap' : '']" 
+        :label="checkitem[itemProp.value]" :key="checkitem[itemProp.value] + Math.random()"> 
+          
+          <span>{{checkitem[itemProp.label]}}</span>
+          <span v-if="checkitem[itemProp.config].type === 'input'" class="checkbox-options-input">
+            <el-input 
+              :clearable="checkitem[itemProp.config].clearable"
+              v-model="checkitem[itemProp.config].value"
+            ></el-input>
+          </span>
       </el-checkbox>
     </el-checkbox-group>
 
@@ -207,7 +218,7 @@
       @change="handleChange($event, record.model)"
       
     > 
-      <el-radio v-for="radioitem in ((record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" :label="radioitem[itemProp.value]" :key="radioitem[itemProp.value]">
+      <el-radio v-for="radioitem in ((record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" :label="radioitem[itemProp.value]" :key="radioitem[itemProp.value] + Math.random()">
          {{radioitem[itemProp.label]}}
       </el-radio>
        
@@ -366,8 +377,9 @@ export default {
         children: 'children',
         value: 'value',
         label: 'label',
+        disabled: 'disabled',
+        config: 'config',
         multiple: this.record.options.multiple,
-
       }
     }
   },
@@ -704,6 +716,14 @@ export default {
   border-left: 0;
   text-align: center;
   display: inline-table;
+}
+
+.base-item .checkbox-options-wrap {
+  display: block;
+}
+
+.base-item .checkbox-options-input {
+  margin-left: 12px;
 }
 
 </style>

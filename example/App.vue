@@ -5,7 +5,7 @@
         <el-tab-pane label="表单绘制" name="first">
             <VueDragFormdesign ref="formDesign" :custom-components="customComponents" >
                 <template slot="controlButton" >
-                    <el-button   type="text" size="medium"  @click="initDemo(1)">示例1</el-button>
+                    <el-button   type="text" size="medium"  @click="initDemo(1)">杭州城市大脑问卷</el-button>
                     <el-button   type="text" size="medium"  @click="initDemo(2)">示例2</el-button>
                     <el-button   type="text" size="medium"  @click="initDemo(3)">示例3</el-button>
                 </template>
@@ -67,13 +67,13 @@ export default {
   } ,
 
   created() {
-    this.formTemplate = require('./data/basic.json')
+    this.formTemplate = require('./data/cityQuestion.json')
   },
   methods: {
     initDemo(index){
         let json = null 
         if(index == 1) {
-            json = require('./data/basic.json')
+            json = require('./data/cityQuestion.json')
         } else if(index == 2) {
             json = require('./data/tablebatch.json')
         } if(index == 3) {

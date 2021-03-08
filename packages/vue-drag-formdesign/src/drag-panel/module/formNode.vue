@@ -33,7 +33,7 @@
 import FormItem from "../../form-item/index";
 export default {
   props: {
-    record: {
+  record: {
       type: Object,
       required: true
     }, 

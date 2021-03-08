@@ -16,9 +16,9 @@
                       <slot name="controlButton">
                         
                       </slot>
-                      <el-button   type="text" size="medium" icon="el-icon-delete" @click="handleClear">清空</el-button>
+                      <el-button  type="text" size="medium" icon="el-icon-delete" @click="handleClear">清空</el-button>
                       <el-button  type="text" size="medium" icon="el-icon-view" @click="handlePreview">预览</el-button>
-                       <el-button  type="text" size="medium" icon="el-icon-view" @click="handleRender">渲染</el-button>
+                      <el-button  type="text" size="medium" icon="el-icon-view" @click="handleRender">渲染</el-button>
                       <el-button  type="text" size="medium" icon="el-icon-download" @click="handleImport">导入</el-button>
                       <el-button  type="text" size="medium" icon="el-icon-upload2" @click="handleGenerateJson">导出</el-button>
                     </span> 
@@ -107,6 +107,7 @@ export default {
         list: [],
         config: {
           labelPosition: "left",
+          labelWrap: "nowrap", // 换行方式
           labelWidth: 100, 
           size: 'mini',
           outputHidden: true ,//  是否输出隐藏字段的值 默认打开,所有字段都输出

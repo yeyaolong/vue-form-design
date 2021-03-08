@@ -13,14 +13,24 @@
         'keyvalue'
         ].includes(type)" :gutter="8">
       <div class="option-change-box" v-for="(val, index) in value" :key="index">
-        <el-col :span="9"
+        <el-col :span="6"
           ><el-input v-model="val.label"   :type="keyNumber ? 'number' : 'text'" placeholder="名称"
         /></el-col>
-        <el-col :span="9"><el-input v-model="val.value" placeholder="值"/></el-col>
-        <el-col :span="6"
-          ><div @click="handleDelete(index)" class="option-delete-box">
-            <i class="el-icon-delete" /></div
-        ></el-col>
+        <el-col :span="6">
+          <el-input v-model="val.value" placeholder="值" v-if="val.config.type === 'option'"/>
+          <el-input v-model="val.config.value" placeholder="值" v-if="val.config.type === 'input'"/>
+        </el-col>
+        <el-col :span="6">          
+          <el-select v-model="val.config.type" placeholder="类型">
+            <el-option label="其它" value="input"></el-option>
+            <el-option label="选项" value="option"></el-option>
+          </el-select>
+        </el-col>
+        <el-col :span="6">
+          <div @click="handleDelete(index)" class="option-delete-box">
+            <i class="el-icon-delete" />
+          </div>
+        </el-col>
       </div>
       <el-col v-if="!disabled" :span="24"><el-button type="primary" @click="handleAdd">添加</el-button></el-col>
     </el-row>
@@ -139,7 +149,12 @@ export default {
         ...this.value,
         {
           value: "",
-          label: ""
+          label: "",
+          config: {
+            type: "option",
+            value: "",
+            clearable: true
+          }
         }
       ];
       this.$emit("input", addData);

@@ -12,6 +12,12 @@
             <el-radio-button label="top">顶部对齐</el-radio-button>
           </el-radio-group>
         </el-form-item>
+        <el-form-item label="标签换行方式">
+          <el-radio-group v-model="config.labelWrap">
+            <el-radio-button label="wrap">换行</el-radio-button>
+            <el-radio-button label="nowrap">不换行</el-radio-button>
+          </el-radio-group>
+        </el-form-item>
         <el-divider></el-divider>
 
         <el-form-item label="标签宽度">

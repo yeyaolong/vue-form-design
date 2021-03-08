@@ -1,0 +1,268 @@
+{
+	"list": [
+		{
+			"type": "text",
+			"label": "《杭州城市大脑建设成果展》调查问卷",
+			"index": "A",
+            "labelFontSize": 24,
+            "options": {
+                "textAlign": "center",
+                "tooptip": "",
+                "hidden": false,
+                "showRequiredMark": false
+            },
+            "key": "cityquestion_title"
+		},
+        {
+			"type": "text",
+			"label": "杭州城市大脑是杭州市民为之骄傲的新名片，智慧杭州已悄然走入日常生活。“健康码” 守护我们的健康，“便捷泊车” 、‘舒心就医”让生活更加便利，“30秒入住” 、“ 20秒入园”让更多的时间留给诗意杭州。每一个场景寄托了对美好生活的期盼，承载着“以人民为中心”的理念。城市大脑建设正走在“数智杭州宜居天堂”的路上，有了您的参与，它将越来越智慧、越来越聪明。真诚期待您的参与!欢迎下载“杭州城市大脑”APP。",
+			"index": "B",
+            "labelFontSize": 18,
+            "options": {
+                "textAlign": "left",
+                "tooptip": "",
+                "hidden": false,
+                "showRequiredMark": false
+            },
+            "key": "cityquestion_desc"
+		},
+        {
+			"type": "divider",
+			"label": "", 
+            "options": {
+                "tooptip": "",
+                "orientation": "left",
+                "direction": "horizontal"
+            },
+            "model": "",
+            "key": "divider_desc"
+		},
+        {
+			"type": "checkbox",
+			"label": "1、参观前，您对城市大脑哪些场景有了解?(可多选)：", 
+            "labelFontSize": 20,
+            "options": {
+                "disabled": false,
+                "hidden": false,
+                "defaultValue": [], 
+                "optionsWrap": true,
+                "dynamic": 0,
+                "tooptip": "",
+                "remoteFunc": "",
+                "dataPath": "",
+                "remoteValue":"" ,
+                "remoteLabel":"",
+                "options": [
+                    {
+                        "value": "便捷泊车，先离场后付费",
+                        "label": "便捷泊车，先离场后付费",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "舒心就医，先看病后付费",
+                        "label": "舒心就医，先看病后付费",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "多游一小时·20秒入园/30秒入住",
+                        "label": "多游一小时·20秒入园/30秒入住",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "亲清在线",
+                        "label": "亲清在线",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "民生直达",
+                        "label": "民生直达",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "其它(请填写具体内容)",
+                        "label": "其它(请填写具体内容)",
+                        "disabled": false,
+                        "config": {
+                            "type": "input",
+                            "value": "还不错，就是有点烂",
+                            "clearable": true
+                        }
+                    }
+                ]
+            },
+            "model": "",
+            "key": "checkbox_1"
+		},
+        {
+			"type": "checkbox",
+			"label": "2、通过本次参观，您对哪个场景印象深刻?(可多选)：", 
+            "labelFontSize": 20,
+            "options": {
+                "disabled": false,
+                "hidden": false,
+                "defaultValue": [], 
+                "optionsWrap": true,
+                "dynamic": 0,
+                "tooptip": "",
+                "remoteFunc": "",
+                "dataPath": "",
+                "remoteValue":"" ,
+                "remoteLabel":"",
+                "options": [
+                    {
+                        "value": "便捷泊车，先离场后付费",
+                        "label": "便捷泊车，先离场后付费",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "便捷泊车，先离场后付费"
+                        }
+                    },
+                    {
+                        "value": "舒心就医，先看病后付费",
+                        "label": "舒心就医，先看病后付费",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "舒心就医，先看病后付费"
+                        }
+                    },
+                    {
+                        "value": "多游一小时·20秒入园/30秒入住",
+                        "label": "多游一小时·20秒入园/30秒入住",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "多游一小时·20秒入园"
+                        }
+                    },
+                    {
+                        "value": "亲清在线",
+                        "label": "亲清在线",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "亲清在线"
+                        }
+                    },
+                    {
+                        "value": "民生直达",
+                        "label": "民生直达",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "民生直达"
+                        }
+                    },
+                    {
+                        "value": "其它(请填写具体内容)",
+                        "label": "其它(请填写具体内容)",
+                        "disabled": false,
+                        "config": {
+                            "type": "input",
+                            "value": "还不错，就是有点烂",
+                            "clearable": true
+                        }
+                    }
+                ]
+            },
+            "model": "",
+            "key": "checkbox_2"
+		},
+        {
+			"type": "checkbox",
+			"label": "3、本次杭州城市大脑建设成果展现场哪部分内容最吸引您?(可多选)：", 
+            "labelFontSize": 20,
+            "options": {
+                "disabled": false,
+                "hidden": false,
+                "defaultValue": [], 
+                "optionsWrap": true,
+                "dynamic": 0,
+                "tooptip": "",
+                "remoteFunc": "",
+                "dataPath": "",
+                "remoteValue":"" ,
+                "remoteLabel":"",
+                "options": [
+                    {
+                        "value": "视频宣传片",
+                        "label": "视频宣传片",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "视频宣传片"
+                        }
+                    },
+                    {
+                        "value": "区县数字驾驶舱",
+                        "label": "区县数字驾驶舱",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "区县数字驾驶舱"
+                        }
+                    },
+                    {
+                        "value": "杭州城市大脑发展历程",
+                        "label": "杭州城市大脑发展历程",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "杭州城市大脑发展历程"
+                        }
+                    },
+                    {
+                        "value": "市民意见栏",
+                        "label": "市民意见栏",
+                        "disabled": false,
+                        "config": {
+                            "type": "option",
+                            "value": "市民意见栏"
+                        }
+                    },
+                    {
+                        "value": "其它(请填写具体内容)",
+                        "label": "其它(请填写具体内容)",
+                        "disabled": false,
+                        "config": {
+                            "type": "input",
+                            "value": "还不错，就是有点烂",
+                            "clearable": true
+                        }
+                    }
+                ]
+            },
+            "model": "",
+            "key": "checkbox_3"
+		}
+	],
+	"config": {
+		"labelPosition": "right",
+        "labelWrap": "wrap",
+		"labelWidth": 100,
+		"size": "mini",
+		"hideRequiredMark": true,
+		"customStyle": ""
+	}
+}

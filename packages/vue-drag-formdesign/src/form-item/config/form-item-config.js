@@ -131,22 +131,43 @@ export const basicsList = [
       disabled: false, //是否禁用
       hidden: false, // 是否隐藏，false显示，true隐藏
       defaultValue: [], 
+      optionsWrap: true, // 选项换行
       dynamic: 0,
       tooptip: '', // 提示
-        remoteFunc: '',
+      remoteFunc: '',
       dataPath: '',
       remoteValue:'' ,
       remoteLabel:'',
       options: [
         {
           value: "1",
-          label: "选项1"
+          label: "选项1",
+          disabled: false,
+          config: {
+            type: "option",
+            value: "选项2"
+          }
         },
         {
           value: "2",
-          label: "选项2"
+          label: "选项2",
+          disabled: false,
+          config: {
+            type: "option",
+            value: "选项2"
+          }
+        },
+        {
+          value: "3",
+          label: "其它",
+          disabled: false,
+          config: {
+            type: "input",
+            value: "还不错，就是有点烂",
+            clearable: true
+          }
         }
-      ]
+      ],      
     },
     model: "",
     key: "",
@@ -288,6 +309,7 @@ export const basicsList = [
       }
     ]
   },
+  
  /* {
     type: "uploadFile", // 表单类型
     label: "上传文件", // 标题文字 
@@ -424,7 +446,8 @@ export const basicsList = [
       disabled: false // 是否禁用，false不禁用，true禁用
     },
     key: ""
-  } ,{
+  },
+  {
       type: "batch",
       label: "动态表格", 
        index: 'P',
@@ -444,28 +467,29 @@ export const basicsList = [
       },
       model: "",
       key: ""
-    }, 
-     {
+  }, 
+  {
       type: "text",
-      label: "标签", 
+      label: "文字", 
       options: {
         textAlign: "left",
         tooptip: '', // 提示
         hidden: false, // 是否隐藏，false显示，true隐藏
-        showRequiredMark: false
+        showRequiredMark: false,
+        fontSize: 12,// 文字大小
       },
       key: ""
     },
     {
       type: "html",
-      label: "HTML", 
+      label: "HTML",
       options: {
         tooptip: '', // 提示
         hidden: false, // 是否隐藏，false显示，true隐藏
         defaultValue: "<strong>HTML</strong>"
       },
       key: ""
-    },
+    }
 ];
  
   
@@ -548,7 +572,8 @@ export const layoutList = [
       bright: false,
       small: true,
       customStyle: "",
-      customClass: ''
+      customClass: '',
+      inline: false, // true 单行 false 多行
     },
     key: "",
     model: ""

@@ -22,11 +22,16 @@
           'cascader'
         ].includes(record.type) || customList.includes(record.type) ) && dynamicVisibleItem && !(record.type == 'select' && renderPreview &&  record.options.previewHidden )
     "
-    :label="formConfig.labelWidth > 0 ? record.label : null " 
+    
     :rules="recordRules"
     :prop="itemProp ? itemProp : (recordRules && recordRules.length > 0 ? record.model : null)"
-  >   
- 
+  >
+    <div v-show="formConfig.labelWrap === 'nowrap' && formConfig.labelWidth > 0 ? record.label : null" slot="label" :style="{ fontSize: record.labelFontSize + 'px'}">
+      {{ record.label }}
+    </div>
+    <div v-show="formConfig.labelWrap === 'wrap' && formConfig.labelWidth > 0 ? record.label : null" :style="{ fontSize: record.labelFontSize + 'px'}">
+      {{ record.label }}
+    </div>
     <BaseItem 
       :models="models"  
       :formConfig="formConfig"
@@ -75,7 +80,7 @@
   </el-form-item>
   
   <!-- 文本 -->
-  <div class="form-label" v-else-if="record.type === 'text' && dynamicVisibleItem " :style="{ textAlign: record.options.textAlign }" > 
+  <div class="form-label" v-else-if="record.type === 'text' && dynamicVisibleItem " :style="{ textAlign: record.options.textAlign, fontSize: record.labelFontSize + 'px' }" > 
       <label
         :class="{ 'is-required': record.options.showRequiredMark || showRequiredMark }"
         v-text="record.label"
