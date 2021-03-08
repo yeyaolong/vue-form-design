@@ -75,7 +75,7 @@ export default {
         if(index == 1) {
             json = require('./data/cityQuestion.json')
         } else if(index == 2) {
-            json = require('./data/tablebatch.json')
+            json = require('./data/basic.json')
         } if(index == 3) {
             json = require('./data/validator1.json')
         } 

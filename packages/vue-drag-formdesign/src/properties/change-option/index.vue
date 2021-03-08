@@ -17,10 +17,11 @@
           ><el-input v-model="val.label"   :type="keyNumber ? 'number' : 'text'" placeholder="名称"
         /></el-col>
         <el-col :span="6">
-          <el-input v-model="val.value" placeholder="值" v-if="val.config.type === 'option'"/>
-          <el-input v-model="val.config.value" placeholder="值" v-if="val.config.type === 'input'"/>
+          <!-- {{ val.config.type }} -->
+          <el-input v-model="val.value" placeholder="值" v-if="!val.config || val.config.type === 'option' || val.config.type === 'radio'"/>
+          <el-input v-model="val.config.value" placeholder="值" v-if="val.config && val.config.type === 'input'"/>
         </el-col>
-        <el-col :span="6">          
+        <el-col :span="6">
           <el-select v-model="val.config.type" placeholder="类型">
             <el-option label="其它" value="input"></el-option>
             <el-option label="选项" value="option"></el-option>

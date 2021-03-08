@@ -14,7 +14,7 @@
           <el-input v-model="selectItem.label" placeholder="请输入" />
         </el-form-item>
         <el-form-item label="标签文字大小">
-             <el-slider v-model="selectItem.fontSize" :min="12" :max="64" input-size="small"></el-slider>
+             <el-slider v-model="selectItem.labelFontSize" :min="12" :max="64" input-size="small"></el-slider>
           </el-form-item>
        
         <el-form-item  label="数据字段" v-if="!hideModel && !['table','grid','divider','label','html','button',].includes(selectItem.type)" >

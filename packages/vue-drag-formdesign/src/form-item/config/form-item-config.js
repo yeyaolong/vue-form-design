@@ -188,18 +188,27 @@ export const basicsList = [
       defaultValue: "", // 默认值 
       dynamic: 0,
       tooptip: '', // 提示
-        remoteFunc: '',
+      remoteFunc: '',
       dataPath: '',
       remoteValue:'' ,
       remoteLabel:'',
       options: [
         {
           value: "1",
-          label: "选项1"
+          label: "选项1",
+          config: {
+            type: "radio",
+            value: "1"
+          }
         },
         {
           value: "2",
-          label: "选项2"
+          label: "选项2",
+          config: {
+            type: "input",
+            value: "222",
+            clearable: true
+          }
         }
       ]
     },

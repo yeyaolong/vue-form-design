@@ -102,6 +102,7 @@
 		{
 			"type": "radio",
 			"label": "单选框",
+			"labelWrap": "true",
 			"index": "F",
 			"options": {
 				"disabled": false,
@@ -112,11 +113,17 @@
 				"options": [
 					{
 						"value": "1",
-						"label": "选项1"
+						"label": "选项1",
+						"config": {
+							"type": "radio"
+						}
 					},
 					{
 						"value": "2",
-						"label": "选项2"
+						"label": "选项2",
+						"config": {
+							"type": "radio"
+						}
 					}
 				],
 				"dynamicHide": false,

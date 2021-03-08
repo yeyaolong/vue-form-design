@@ -255,6 +255,257 @@
             },
             "model": "",
             "key": "checkbox_3"
+		},
+        {
+			"type": "radio",
+			"label": "4、本次城市大脑建设成果展是否让您更深入了解杭州城市大脑?(单选)",
+            "labelFontSize": 20,
+			"options": {
+				"disabled": false,
+				"hidden": false,
+				"defaultValue": "",
+				"dynamic": 0,
+				"tooptip": "",
+                "optionsWrap": true,
+				"options": [
+					{
+						"value": "深入了解",
+						"label": "深入了解",
+						"config": {
+							"type": "radio",
+                            "value": "深入了解"
+						}
+					},
+					{
+						"value": "比较了解",
+						"label": "比较了解",
+						"config": {
+							"type": "radio",
+                            "value": "比较了解"
+						}
+					},
+                    {
+						"value": "一般了解",
+						"label": "一般了解",
+						"config": {
+							"type": "radio",
+                            "value": "一般了解"
+						}
+					},
+                    {
+						"value": "都不了解",
+						"label": "都不了解",
+						"config": {
+							"type": "radio",
+                            "value": "都不了解"
+						}
+					}
+				],
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "radio_1596781099911",
+			"key": "radio_1596781099911",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		},
+        {
+			"type": "radio",
+			"label": "5、您对本次杭州城市大脑建设成果展的满意程度?(单选)",
+            "labelFontSize": 20,
+			"options": {
+				"disabled": false,
+				"hidden": false,
+				"defaultValue": "",
+				"dynamic": 0,
+				"tooptip": "",
+                "optionsWrap": true,
+				"options": [
+					{
+						"value": "非常满意",
+						"label": "非常满意",
+						"config": {
+							"type": "radio",
+                            "value": "非常满意"
+						}
+					},
+					{
+						"value": "满意",
+						"label": "满意",
+						"config": {
+							"type": "radio",
+                            "value": "满意"
+						}
+					},
+                    {
+						"value": "一般",
+						"label": "一般",
+						"config": {
+							"type": "radio",
+                            "value": "一般"
+						}
+					},
+                    {
+						"value": "不满意(请填写具体内容)",
+						"label": "不满意(请填写具体内容)",
+						"config": {
+							"type": "input",
+                            "value": "",
+                            "clearable": true
+						}
+					}
+				],
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "radio_1596781099912",
+			"key": "radio_1596781099912",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		},
+        {
+			"type": "radio",
+			"label": "6、您对城市大脑接待预约系统的满意程度?(单选)",
+            "labelFontSize": 20,
+			"options": {
+				"disabled": false,
+				"hidden": false,
+				"defaultValue": "",
+				"dynamic": 0,
+				"tooptip": "",
+                "optionsWrap": true,
+				"options": [
+					{
+						"value": "非常满意",
+						"label": "非常满意",
+						"config": {
+							"type": "radio",
+                            "value": "非常满意"
+						}
+					},
+					{
+						"value": "满意",
+						"label": "满意",
+						"config": {
+							"type": "radio",
+                            "value": "满意"
+						}
+					},
+                    {
+						"value": "一般",
+						"label": "一般",
+						"config": {
+							"type": "radio",
+                            "value": "一般"
+						}
+					},
+                    {
+						"value": "不满意(请填写具体内容)",
+						"label": "不满意(请填写具体内容)",
+						"config": {
+							"type": "input",
+                            "value": "",
+                            "clearable": true
+						}
+					}
+				],
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "radio_1596781099914",
+			"key": "radio_1596781099914",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		},
+        {
+			"type": "input",
+			"label": "7、针对本次杭州城市大脑建设成果展，请留下您的宝贵意见(填空)",
+            "labelFontSize": 20,
+			"index": "A",
+			"options": {
+				"type": "text",
+				"width": "100%",
+				"defaultValue": "",
+				"placeholder": "请输入",
+				"clearable": false,
+				"maxLength": null,
+				"prepend": "",
+				"append": "",
+				"tooptip": "",
+				"hidden": false,
+				"disabled": false,
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "input_1596781096796",
+			"key": "input_1596781096796",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
+		},
+        {
+			"type": "input",
+			"label": "8、您觉得城市大脑预约系统需要在什么方面进行优化完善(填空)",
+            "labelFontSize": 20,
+			"index": "A",
+			"options": {
+				"type": "text",
+				"width": "100%",
+				"defaultValue": "",
+				"placeholder": "请输入",
+				"clearable": false,
+				"maxLength": null,
+				"prepend": "",
+				"append": "",
+				"tooptip": "",
+				"hidden": false,
+				"disabled": false,
+				"dynamicHide": false,
+				"dynamicHideValue": ""
+			},
+			"model": "input_1596781096797",
+			"key": "input_1596781096797",
+			"rules": [
+				{
+					"required": false,
+					"message": "必填项",
+					"trigger": [
+						"change",
+						"blur"
+					]
+				}
+			]
 		}
 	],
 	"config": {
