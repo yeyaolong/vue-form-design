@@ -586,9 +586,8 @@
             <el-checkbox v-model="options.disabled"  label="禁用" />   
           </el-form-item> 
           <el-divider></el-divider>
-          {{ selectItem.options.customStyle }}
           <el-form-item label="自定义样式">
-            <el-input v-model="selectItem.options.customStyle" type="textarea"></el-input>
+            <el-input v-model="customStyleStr" type="textarea" rows="7"></el-input>
           </el-form-item>
         </template> 
         <!-- 按钮  end -->
@@ -760,13 +759,28 @@ export default {
   name: "formItemProperties",
   data() {
     return {
-      options: {}
+      options: {},
+      customStyleStr: '{}'
     };
   },
   watch: {
-    selectItem(val) { 
-      this.options = val.options || {};
-      this.options.customStyle = JSON.parse(val.customStyle);
+    selectItem:{
+      handler(val) {
+        // eslint-disable-next-line no-debugger
+        // debugger;
+        this.options = val.options || {};
+        if (this.options.customStyle) {
+          this.customStyleStr = JSON.stringify(this.options.customStyle);
+        }
+        
+      },
+      deep: true
+    },
+    customStyleStr() {
+      if (this.customStyleStr) {
+        let customStyleStr = this.customStyleStr.trim().replace(/[\r\n]/g,"")
+        this.options.customStyle = JSON.parse(customStyleStr);
+      }
     }
   },
   props: {

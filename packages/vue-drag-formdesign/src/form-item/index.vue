@@ -77,7 +77,6 @@
     v-else-if="record.type === 'button' && dynamicVisibleItem"    
     :style="{textAlign: record.textAlign}"
   >
-    
     <el-button
       :disabled="disabled || record.options.disabled"
       :size="record.labelFontSize + 'px'"
