@@ -22,11 +22,14 @@
           'cascader'
         ].includes(record.type) || customList.includes(record.type) ) && dynamicVisibleItem && !(record.type == 'select' && renderPreview &&  record.options.previewHidden )
     "
-    
     :rules="recordRules"
     :prop="itemProp ? itemProp : (recordRules && recordRules.length > 0 ? record.model : null)"
   >
-    <div v-show="formConfig.labelWrap === 'nowrap' && formConfig.labelWidth > 0 ? record.label : null" slot="label" :style="{ fontSize: record.labelFontSize + 'px'}">
+    <div 
+      v-show="formConfig.labelWrap === 'nowrap' && formConfig.labelWidth > 0 ? record.label : null" 
+      slot="label" 
+      :style="{ fontSize: record.labelFontSize + 'px'}"
+    >
       {{ record.label }}
     </div>
     <div
@@ -91,6 +94,7 @@
   <div class="form-label" v-else-if="record.type === 'text' && dynamicVisibleItem " :style="{ textAlign: record.textAlign, fontSize: record.labelFontSize + 'px' }" > 
       <label
         :class="{ 'is-required': record.options.showRequiredMark || showRequiredMark }"
+        :style="record.options.customStyle"
         v-text="record.label"
       ></label>
   </div>

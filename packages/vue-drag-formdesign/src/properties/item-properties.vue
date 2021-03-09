@@ -597,11 +597,16 @@
           <el-form-item   label="操作属性" >
             <el-checkbox v-model="options.hidden"  label="隐藏" /> 
             <el-checkbox v-model="options.showRequiredMark" label="显示必选标记" />
+          </el-form-item>
+          <el-divider></el-divider>
+          <el-form-item label="自定义样式">
+            <el-input v-model="customStyleStr" type="textarea" rows="7"></el-input>
+          </el-form-item>
+          <el-divider></el-divider>
+          <el-form-item  label="动态必选" >
+            <el-input type="textarea" v-model="options.showRequiredMarkScript" :rows="4" placeholder="请输入表达式或者动态函数,数据实体以$标识"/>
           </el-form-item> 
-          <el-divider ></el-divider>
-          <el-form-item   label="动态必选" >
-           <el-input type="textarea" v-model="options.showRequiredMarkScript" :rows="4" placeholder="请输入表达式或者动态函数,数据实体以$标识"/>
-          </el-form-item> 
+          
         </template> 
         <!-- 标签  end -->
 

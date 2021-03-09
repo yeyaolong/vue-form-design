@@ -485,7 +485,11 @@ export const basicsList = [
       label: "文字", 
       textAlign: "left",
       options: {
-        
+        customStyle: {
+          width: "100%",
+          textAlign: "center",
+          background: "#f00"
+        },
         tooptip: '', // 提示
         hidden: false, // 是否隐藏，false显示，true隐藏
         showRequiredMark: false,

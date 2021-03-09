@@ -9,7 +9,7 @@
       从左侧选择组件添加
     </p>
     <el-form 
-      :label-width="data.config.labelWrap ? '0px' : data.config.labelWidth + 'px'" 
+      :label-width="data.config.labelWrap === 'wrap' ? '0px' : data.config.labelWidth + 'px'" 
       class="a-form-box form-build"
       :label-position="data.config.labelPosition"
       :hide-required-asterisk="data.config.hideRequiredMark" 
