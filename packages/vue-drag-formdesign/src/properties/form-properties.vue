@@ -18,8 +18,6 @@
             <el-radio-button label="nowrap">不换行</el-radio-button>
           </el-radio-group>
         </el-form-item>
-        <el-divider></el-divider>
-
         <el-form-item label="标签宽度">
           <el-input-number v-model="config.labelWidth" :min="0" :max="200" :step="10"></el-input-number>
         </el-form-item>

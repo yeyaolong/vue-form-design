@@ -5,8 +5,9 @@
 			"label": "《杭州城市大脑建设成果展》调查问卷",
 			"index": "A",
             "labelFontSize": 24,
+            "textAlign": "center",
             "options": {
-                "textAlign": "center",
+                
                 "tooptip": "",
                 "hidden": false,
                 "showRequiredMark": false
@@ -18,8 +19,8 @@
 			"label": "杭州城市大脑是杭州市民为之骄傲的新名片，智慧杭州已悄然走入日常生活。“健康码” 守护我们的健康，“便捷泊车” 、‘舒心就医”让生活更加便利，“30秒入住” 、“ 20秒入园”让更多的时间留给诗意杭州。每一个场景寄托了对美好生活的期盼，承载着“以人民为中心”的理念。城市大脑建设正走在“数智杭州宜居天堂”的路上，有了您的参与，它将越来越智慧、越来越聪明。真诚期待您的参与!欢迎下载“杭州城市大脑”APP。",
 			"index": "B",
             "labelFontSize": 18,
+            "textAlign": "left",
             "options": {
-                "textAlign": "left",
                 "tooptip": "",
                 "hidden": false,
                 "showRequiredMark": false
@@ -41,6 +42,7 @@
 			"type": "checkbox",
 			"label": "1、参观前，您对城市大脑哪些场景有了解?(可多选)：", 
             "labelFontSize": 20,
+            "textAlign": "left",
             "options": {
                 "disabled": false,
                 "hidden": false,
@@ -506,7 +508,30 @@
 					]
 				}
 			]
-		}
+		},
+        {
+            "type": "button",
+            "label": "按钮",
+            "index": "O",
+            "labelFontSize": 16,
+            "textAlign": "center",
+            
+            "options": {
+              "type": "primary",
+              "handle": "submit",
+              "dynamicFun": "",
+              "size": "medium",
+              "tooptip": "",
+              "hidden": false,
+              "disabled": false,
+              "customStyle": {
+                "width": "100%",
+                "textAlign": "center",
+                "background": "#f00"
+               }
+            },
+            "key": "button_1596781096797"
+        }
 	],
 	"config": {
 		"labelPosition": "right",

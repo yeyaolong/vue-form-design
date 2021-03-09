@@ -446,10 +446,13 @@ export const basicsList = [
     type: "button", // 表单类型
     label: "按钮", // 标题文字 
     index: 'O',
+    labelFontSize: 14,
+    textAlign: "center",
     options: {
       type: "primary",
       handle: "submit",
       dynamicFun: "",
+      size: 'medium',
       tooptip: '', // 提示
       hidden: false, // 是否隐藏，false显示，true隐藏
       disabled: false // 是否禁用，false不禁用，true禁用
@@ -480,8 +483,9 @@ export const basicsList = [
   {
       type: "text",
       label: "文字", 
+      textAlign: "left",
       options: {
-        textAlign: "left",
+        
         tooptip: '', // 提示
         hidden: false, // 是否隐藏，false显示，true隐藏
         showRequiredMark: false,

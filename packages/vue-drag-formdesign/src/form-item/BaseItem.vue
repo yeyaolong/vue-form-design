@@ -193,12 +193,13 @@
       :placeholder="record.options.placeholder"
       @change="handleChange($event, record.model)"
     >
-      <el-checkbox 
+      <el-checkbox
         v-for="checkitem in ( (record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" 
         :disabled="checkitem[itemProp.disabled]" 
         :class="[record.options.optionsWrap ? 'checkbox-options-wrap' : '']" 
-        :label="checkitem[itemProp.value]" :key="checkitem[itemProp.value] + Math.random()"> 
-          
+        :label="checkitem[itemProp.value]" 
+        :key="checkitem[itemProp.value] + Math.random()"
+      > 
           <span>{{checkitem[itemProp.label]}}</span>
           <span v-if="checkitem[itemProp.config].type === 'input'" class="checkbox-options-input">
             <el-input 
@@ -216,7 +217,6 @@
       :disabled="disabled || record.options.disabled"
       :placeholder="record.options.placeholder"
       @change="handleChange($event, record.model)"
-      
     > 
       <el-radio 
         v-for="radioitem in ((record.options.dynamic == 1 && record.options.remoteFunc) || (record.options.dynamic == 2 && record.options.dictType) ? checkValues : record.options.options)" 

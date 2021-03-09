@@ -29,7 +29,10 @@
     <div v-show="formConfig.labelWrap === 'nowrap' && formConfig.labelWidth > 0 ? record.label : null" slot="label" :style="{ fontSize: record.labelFontSize + 'px'}">
       {{ record.label }}
     </div>
-    <div v-show="formConfig.labelWrap === 'wrap' && formConfig.labelWidth > 0 ? record.label : null" :style="{ fontSize: record.labelFontSize + 'px'}">
+    <div
+      v-show="formConfig.labelWrap === 'wrap' && formConfig.labelWidth > 0 ? record.label : null" 
+      :style="{ fontSize: record.labelFontSize + 'px', textAlign: record.textAlign}"
+    >
       {{ record.label }}
     </div>
     <BaseItem 
@@ -68,19 +71,25 @@
   </el-form-item> 
       
   <!-- button按钮 -->
+  <!-- :style="record.style" -->
+  <!-- :style="{textAlign: record.textAlign}" -->
   <el-form-item
-    v-else-if="record.type === 'button' && dynamicVisibleItem" 
-  > 
+    v-else-if="record.type === 'button' && dynamicVisibleItem"    
+    :style="{textAlign: record.textAlign}"
+  >
+    
     <el-button
-      :disabled="disabled || record.options.disabled" 
-      :type="record.options.type" 
+      :disabled="disabled || record.options.disabled"
+      :size="record.labelFontSize + 'px'"
+      :type="record.options.type"      
+      :style="record.options.customStyle"
       @click="buttonClick"
       v-text="record.label"
     ></el-button>
   </el-form-item>
   
   <!-- 文本 -->
-  <div class="form-label" v-else-if="record.type === 'text' && dynamicVisibleItem " :style="{ textAlign: record.options.textAlign, fontSize: record.labelFontSize + 'px' }" > 
+  <div class="form-label" v-else-if="record.type === 'text' && dynamicVisibleItem " :style="{ textAlign: record.textAlign, fontSize: record.labelFontSize + 'px' }" > 
       <label
         :class="{ 'is-required': record.options.showRequiredMark || showRequiredMark }"
         v-text="record.label"

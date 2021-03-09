@@ -32,7 +32,7 @@
   </div>
       
   <!-- 文本 -->
-  <div v-else-if="record.type === 'text'" :style="{ textAlign: record.options.textAlign }"> 
+  <div v-else-if="record.type === 'text'" :style="{ textAlign: record.textAlign }"> 
     <label :class="{ 'ant-form-item-required': record.options.showRequiredMark }" v-text="record.label" ></label>  
   </div>
   <!-- html -->

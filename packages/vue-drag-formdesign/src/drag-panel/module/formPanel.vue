@@ -9,7 +9,7 @@
       从左侧选择组件添加
     </p>
     <el-form 
-      :label-width="data.config.labelWrap ? 0 : data.config.labelWidth + 'px'" 
+      :label-width="data.config.labelWrap ? '0px' : data.config.labelWidth + 'px'" 
       class="a-form-box form-build"
       :label-position="data.config.labelPosition"
       :hide-required-asterisk="data.config.hideRequiredMark" 
@@ -98,11 +98,7 @@
         <el-button @click="styleVisible = false">取 消</el-button> 
         <el-button type="primary" @click="settingStyle">确 定</el-button>
       </span>
-   
     </el-dialog>
-
-
-
   </div>
 </template>
 <script>
